@@ -1,0 +1,518 @@
+/* CSS Variables for consistent theming */
+:root {
+    --primary-red: #D32F2F; /* Strong red for blood donation theme */
+    --primary-red-dark: #B71C1C; /* Darker red for hover states */
+    --accent-blue: #2196F3; /* A calming blue for secondary elements */
+    --light-grey: #f4f7f6; /* Light background for sections */
+    --dark-grey: #333; /* Dark text color */
+    --medium-grey: #666; /* Medium text color */
+    --white: #ffffff;
+    --border-color: #ddd; /* Light border for inputs, cards */
+    --shadow-light: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    --shadow-medium: rgba(0, 0, 0, 0.2); /* Stronger shadow */
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--dark-grey);
+    background-color: var(--light-grey);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-red);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-red-dark);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-red);
+    margin-bottom: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--primary-red-dark);
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px var(--shadow-medium);
+}
+
+/* Header */
+.main-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px var(--shadow-light);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.site-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    color: var(--primary-red);
+}
+
+.blood-drop-icon {
+    font-size: 1.2em;
+    margin-right: 8px;
+    color: var(--primary-red);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: center;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 0.95em;
+    color: var(--dark-grey);
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-red);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    overflow: hidden; /* For the marquee effect */
+    margin-bottom: 40px;
+}
+
+.hero-image-overlay {
+    position: relative;
+    width: 100%;
+    height: 450px; /* Fixed height for consistency */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area without distortion */
+    filter: brightness(60%); /* Darken image for text readability */
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-image-overlay:hover .hero-image {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.hero-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white);
+    z-index: 1;
+    width: 80%; /* Constrain text width */
+}
+
+.hero-title {
+    font-size: 3.5em;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Marquee Effect (CSS Animation) */
+.marquee-container {
+    background-color: var(--primary-red);
+    color: var(--white);
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.marquee-content {
+    display: inline-block;
+    padding-left: 100%; /* Start off-screen */
+    animation: marquee 25s linear infinite; /* Adjust duration for speed */
+}
+
+.marquee-content span {
+    margin-right: 50px; /* Space between phrases */
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); } /* Move fully to the left */
+}
+
+/* Info & Form Section */
+.info-form-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start; /* Align top of columns */
+    margin-bottom: 60px;
+}
+
+.info-content {
+    padding: 20px 0;
+}
+
+.info-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: var(--medium-grey);
+}
+
+.info-image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+.info-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.form-container {
+    background-color: var(--white);
+    padding: 30px;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    color: var(--accent-blue);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-grey);
+    font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    color: var(--dark-grey);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+}
+
+.gender-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.gender-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+.gender-options label {
+    margin-bottom: 0; /* Override default label margin */
+    display: inline-block; /* For proper alignment with radio buttons */
+    font-weight: 400; /* Regular font for radio labels */
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px 25px;
+    background-color: var(--primary-red);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.submit-button:hover {
+    background-color: var(--primary-red-dark);
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* How To Donate Section */
+.how-to-donate-section {
+    margin-bottom: 60px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.step-card {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.step-icon {
+    font-size: 3em;
+    color: var(--primary-red);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.step-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--primary-red);
+}
+
+.step-card p {
+    color: var(--medium-grey);
+    line-height: 1.7;
+    font-size: 0.95em;
+}
+
+/* Video Section */
+.video-section {
+    margin-bottom: 60px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center; /* Center videos if not full width */
+}
+
+.video-item {
+    background-color: var(--dark-grey); /* Placeholder for video background */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    /* Maintain aspect ratio for iframes */
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+}
+
+.video-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* Footer */
+.main-footer {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-content p {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.social-links .social-icon {
+    color: var(--white);
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links .social-icon:hover {
+    color: var(--primary-red);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.8em;
+    }
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+    .info-form-section {
+        grid-template-columns: 1fr;
+    }
+    .info-content {
+        order: 2; /* Put info content below form on smaller screens */
+        padding-top: 0;
+    }
+    .form-container {
+        order: 1; /* Put form on top */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul {
+        margin-top: 15px;
+        flex-direction: column; /* Stack nav items */
+        align-items: center;
+        gap: 10px;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+
+    .hero-image-overlay {
+        height: 350px;
+    }
+    .hero-title {
+        font-size: 2.2em;
+    }
+    .hero-subtitle {
+        font-size: 1.1em;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .steps-grid, .video-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    .site-title {
+        font-size: 1.5em;
+    }
+    .hero-image-overlay {
+        height: 300px;
+    }
+    .hero-title {
+        font-size: 1.8em;
+    }
+    .hero-subtitle {
+        font-size: 1em;
+    }
+    .form-container, .step-card {
+        padding: 20px;
+    }
+    .submit-button {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+    .video-item {
+        margin-bottom: 20px;
+    }
+}
