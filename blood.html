@@ -1,82 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=], initial-scale=1.0" />
-    <title>Blood Donation</title>
-    <link rel="stylesheet" href="blood.css"/>
-  </head>
-  <body>
-    <div id="container">
-      <div id="image">
-        <div id="blood1">BLOOD DONATION</div>
-        <img
-          src="https://www.sriramakrishnahospital.com/wp-content/uploads/2021/06/Blood-Donation-1.jpg"
-          class="image"
-        />
-      </div>
-    </div>
-    <div id="image1">
-      <div id="box2">
-        <marquee scrollamount="17">Blood Donation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Be The Reason For Someone's Heartbeat.
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Gift Of  "Blood"  Is A Gift To Someone's "Life" .
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“O people”, Did You Know You Are Universal Donors.
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blood Donation</marquee>
-      </div>
-      <div id="image3">
-<div id="detail">
-  <a href="sign.html"><div id="aa">Login</div></a>
-  <a href="reg.html"><div id="aa">Registration</div></a>
-  <a href="wspdb.html"><div id="aa">Why Should People Donate Blood?</div></a>
-  <a href="wcgb.html"><div id="aa">Who Can Give Blood?</div></a>
-  <a href="wsngb.html"><div id="aa">Who Should Not Give Blood?</div></a>
-  <a href="contact.html"><div id="aa">Contact us</div></a>
-</div>
-      </div>
-      <div id="image4">
-      <div id="imageblood"><img src="https://www.sriramakrishnahospital.com/wp-content/uploads/2021/06/Blood-Donation-1.jpg" 
-          width="1000px" height="400px"></div>
-          <div id="form">
-          <form>
-          <fieldset>
-            <legend>Blood Donation</legend>
-          <div id="form1">Name:<input type="text"></div>
-          <div id="form1">Gender: &nbsp;Male<input type="checkbox" checked>&nbsp; &nbsp;Female<input type="checkbox"></div>
-        <div id="form1">
-          
-          Age:<input type="number" max="101">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Blood, Save Lives - Blood Donation System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content container">
+            <h1 class="site-title"><span class="material-icons blood-drop-icon">bloodtype</span> Donate Blood, Save Lives</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="sign.html" class="nav-link">Login</a></li>
+                    <li><a href="reg.html" class="nav-link">Registration</a></li>
+                    <li><a href="wspdb.html" class="nav-link">Why Donate?</a></li>
+                    <li><a href="wcgb.html" class="nav-link">Who Can Give Blood?</a></li>
+                    <li><a href="wsngb.html" class="nav-link">Who Cannot Give?</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-        <div id="form1">State:<select>
-          <option>Jammu and Kashmir</option>
-          <option>Bihar</option>
-          <option>Himachal</option>
-          <option>Punjab</option>
-          <option>Andra pradesh</option>
-        </select>
-      </div>
-      <div id="form1">Blood group:<select>
-        <option>A+</option>
-        <option>B+</option>
-        <option>o+</option>
-        <option>o-</option>
-        <option>B-</option>
-        <option>AB+</option>
-        </select></div>
-        <div><button id="button">Sumbit</button></div>
-        
-      </form></fieldset>
-      </div>
-      </div>
-      <div id="image5">
-      <div class="video1" id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/6tl7hB1V-os" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-      <div class="video2"><iframe width="560" height="315" src="https://www.youtube.com/embed/7HXJyMjUBqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-  </div>
-  <div id="image6">
-    <div id="p"><h2>How To Donate</h2></div>
-    <div id="p1">1. Donor must fill the Registration form.</div>
-    <div id="p1">2. Medical Check up (5 mins) Donor Medical History & Life Style is asked, Check up of temperature ,Blood donation, Pulse and Haemoglobin</div>
-  <div id="p1">3. Donation (8 mins) Phlebotomist draws unit(350ml/450ml) of Blood </div>
-  <div id="p1">4. Refreshment(10 mins)</div>
-</div>
-     </div>
-  </body>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-image-overlay">
+                <img src="https://www.sriramakrishnahospital.com/wp-content/uploads/2021/06/Blood-Donation-1.jpg" alt="Blood Donation Hero Image" class="hero-image">
+                <div class="hero-text-container">
+                    <h2 class="hero-title">Be The Reason For Someone's Heartbeat.</h2>
+                    <p class="hero-subtitle">The Gift Of "Blood" Is A Gift To Someone's "Life"!</p>
+                </div>
+            </div>
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <span>Blood Donation &bull; Be The Reason For Someone's Heartbeat. &bull; The Gift Of "Blood" Is A Gift To Someone's "Life" . &bull; “O people”, Did You Know You Are Universal Donors. &bull; Blood Donation &bull;</span>
+                    <span>Blood Donation &bull; Be The Reason For Someone's Heartbeat. &bull; The Gift Of "Blood" Is A Gift To Someone's "Life" . &bull; “O people”, Did You Know You Are Universal Donors. &bull; Blood Donation &bull;</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-form-section container">
+            <div class="info-content">
+                <h2 class="section-title">Become a Donor</h2>
+                <p>Your single donation can save up to three lives. Every drop counts. Join our community of lifesavers today.</p>
+                <div class="info-image">
+                    <img src="https://www.sriramakrishnahospital.com/wp-content/uploads/2021/06/Blood-Donation-1.jpg" alt="Blood Donor" width="100%">
+                </div>
+            </div>
+            <div class="form-container card">
+                <h3 class="form-title">Donor Registration</h3>
+                <form id="bloodDonationForm">
+                    <div class="form-group">
+                        <label for="donorName">Name:</label>
+                        <input type="text" id="donorName" name="donorName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <div class="gender-options">
+                            <input type="radio" id="genderMale" name="gender" value="male" checked>
+                            <label for="genderMale">Male</label>
+                            <input type="radio" id="genderFemale" name="gender" value="female">
+                            <label for="genderFemale">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorAge">Age:</label>
+                        <input type="number" id="donorAge" name="donorAge" min="18" max="65" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorState">State:</label>
+                        <select id="donorState" name="donorState" required>
+                            <option value="">Select State</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bloodGroup">Blood Group:</label>
+                        <select id="bloodGroup" name="bloodGroup" required>
+                            <option value="">Select Blood Group</option>
+                            <option value="A+">A+</option>
+                            <option value="B+">B+</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">Register to Donate</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="how-to-donate-section container">
+            <h2 class="section-title">How To Donate Blood</h2>
+            <div class="steps-grid">
+                <div class="step-card card">
+                    <span class="material-icons step-icon">how_to_reg</span>
+                    <h3>1. Registration</h3>
+                    <p>Donor must fill out the comprehensive registration form with accurate details.</p>
+                </div>
+                <div class="step-card card">
+                    <span class="material-icons step-icon">medical_information</span>
+                    <h3>2. Medical Check-up</h3>
+                    <p>A brief medical check-up (approx. 5 mins) including medical history, lifestyle questions, temperature, blood pressure, pulse, and hemoglobin test.</p>
+                </div>
+                <div class="step-card card">
+                    <span class="material-icons step-icon">bloodtype</span>
+                    <h3>3. Donation</h3>
+                    <p>A trained phlebotomist draws a unit (350ml/450ml) of blood. This process typically takes about 8-10 minutes.</p>
+                </div>
+                <div class="step-card card">
+                    <span class="material-icons step-icon">local_cafe</span>
+                    <h3>4. Refreshment</h3>
+                    <p>Enjoy light refreshments for about 10 minutes to help your body recover and rehydrate.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section container">
+            <h2 class="section-title">Learn More About Blood Donation</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/S2qYt4S224A" title="Why Blood Donation Is Important" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-item">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/I05u6-258-0" title="The Blood Donation Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 Blood Donation System. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon" aria-label="Facebook"><span class="material-icons">facebook</span></a>
+                <a href="#" class="social-icon" aria-label="Twitter"><span class="material-icons">diversity_3</span></a>
+                <a href="#" class="social-icon" aria-label="Instagram"><span class="material-icons">share</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
